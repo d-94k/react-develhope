@@ -1,1 +1,1 @@
-Start the application with the npm start command and open the application in your browser (the default location is http://localhost:3000).
+Modify the Hello component so that it shows a p tag below the h1 tag with the message "What a beautiful day!".
