@@ -1,1 +1,1 @@
-Create a new index.js file within the src folder and render the App component using the ReactDOM.render method.
+Start the application with the npm start command and open the application in your browser (the default location is http://localhost:3000).
