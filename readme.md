@@ -1,1 +1,3 @@
-Extract the "What a beautiful day!" message into a new component called Message and render it within the Hello component.
+Q: Can you use the Hello component more than once in the App component? What happens if you do?
+
+A: Yes, React components are reusable
