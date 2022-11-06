@@ -1,3 +1,1 @@
-Q: Can you render the Message component directly within the App component? What happens if you do?
-
-A: If correctly exported and imported, the component can be used in the App component
+Create a Welcome class component that receives a name prop and renders the Welcome, {name}! message within a p tag. Render this component to you App component, passing it a name prop of your choosing.
