@@ -1,3 +1,3 @@
-Q: What happens if the name variable is not passed to the function?
+Q: What happens if the name variable contains a JSX expression instead of a string?
 
-A: 
+A: JSX expressions are fine and will be rendered 
