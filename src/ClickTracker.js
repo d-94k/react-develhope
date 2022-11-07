@@ -1,9 +1,14 @@
 import React from "react";
 
 export default class ClickTracker extends React.Component {
+    state = { 
+        str: ''
+    }
     
     clickReveal = (event) => {
-        console.log (event.target.innerHTML);
+        this.setState({
+            str: event.target.innerHTML
+        });
     }
 
     render () {
@@ -13,7 +18,7 @@ export default class ClickTracker extends React.Component {
                 <button onClick={this.clickReveal}>First Button</button>    
                 <button onClick={this.clickReveal}>Second Button</button>
                 <button onClick={this.clickReveal}>Third Button</button>
-                <h1>The last button you clicked is... </h1>
+                <h1>The last button you clicked is... {this.state.str}</h1>
             </>
         )
     }
