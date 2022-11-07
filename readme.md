@@ -1,8 +1,8 @@
 Q: Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required?
 
-A: This would work as well
+A: This would work as well:
 
-import React from "react";
+``` import React from "react";
 
 export default class Counter extends React.Component {
     
@@ -24,3 +24,4 @@ class CounterDisplay extends React.Component {
         return <h1>Counter: {this.props.counter}</h1>
     }
 }
+```
