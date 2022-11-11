@@ -9,12 +9,21 @@ export default class Login extends React.Component {
             remember: false
         }
     }
+
+    inputHandler = (event) => {
+        const name = event.target.name;
+        const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+        this.setState ({
+            [name] : value
+        })
+    }
+
     render () {
         return (
             <>
-                <input name="username" value={this.state.username} /> 
-                <input type="password" name="password" value={this.state.password} />   
-                <input type="checkbox" name="remember" value={this.state.remember} />  
+                <input name="username" value={this.state.username} onChange={this.inputHandler} /> 
+                <input name="password" type="password" value={this.state.password} onChange={this.inputHandler} />   
+                <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.inputHandler} />  
             </>
         )
     }
