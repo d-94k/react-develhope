@@ -22,6 +22,13 @@ export default class TodoList extends React.Component {
         })
     }
 
+    resetTodos = () => {
+        this.setState ({
+            items: [],
+            text: ''
+        })
+    }
+
     render () {
         return (
             <>
@@ -29,6 +36,7 @@ export default class TodoList extends React.Component {
                 <ul>{this.state.items.map(item => <li key={item.id}>{item.text}</li>)}</ul>
                 <input onChange={this.handleChange} value={this.state.text} />
                 <button onClick={this.handleSubmit}>Add Todo</button>
+                <button onClick={this.resetTodos}>Reset Todos</button>
             </>
         )
     }
