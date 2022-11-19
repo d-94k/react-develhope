@@ -26,7 +26,7 @@ export default class UncontrolledLogin extends React.Component {
         return (
             <>
                 <h3>UncontrolledLogin.js form:</h3>
-                <input ref={this._username} /> 
+                <input ref={this._username} autoFocus /> 
                 <input ref={this._password} type="password" />   
                 <input ref={this._checkbox} type="checkbox"  />
                 <button onClick={this.inputHandler}>Login</button>
