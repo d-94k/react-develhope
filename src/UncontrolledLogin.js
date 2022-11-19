@@ -29,7 +29,7 @@ export default class UncontrolledLogin extends React.Component {
                 <input ref={this._username} /> 
                 <input ref={this._password} type="password" />   
                 <input ref={this._checkbox} type="checkbox"  />
-                <button onClick={this.inputHandler} disabled={this._username.current.value !== '' && this._password.current.value !== '' ? false : true}>Login</button>
+                <button onClick={this.inputHandler}>Login</button>
                 <button onClick={this.inputReset}>Reset</button>
             </>
         )
