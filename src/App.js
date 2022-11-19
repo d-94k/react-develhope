@@ -7,6 +7,7 @@ import InteractiveWelcome from "./InteractiveWelcome";
 import Welcome from "./Welcome";
 import Login from "./Login";
 import UncontrolledLogin from "./UncontrolledLogin";
+import TodoList from "./TodoList";
 
 export default class App extends React.Component {
     render () {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
               <InteractiveWelcome />
               <Login />
               <UncontrolledLogin />
+              <TodoList />
             </div>
         )
     }
