@@ -8,6 +8,7 @@ import Welcome from "./Welcome";
 import Login from "./Login";
 import UncontrolledLogin from "./UncontrolledLogin";
 import TodoList from "./TodoList";
+import Container from "./Container";
 
 export default class App extends React.Component {
     render () {
@@ -22,6 +23,9 @@ export default class App extends React.Component {
               <Login />
               <UncontrolledLogin />
               <TodoList />
+              <Container>
+                <h3>This is a container</h3>
+              </Container>
             </div>
         )
     }
