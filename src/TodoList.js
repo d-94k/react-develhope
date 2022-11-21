@@ -17,8 +17,7 @@ export default class TodoList extends React.Component {
 
     handleSubmit = () => {
         this.setState ({
-            items: this.state.items.concat({text: this.state.text, id: Date.now()}),
-            text: ''
+            items: [...this.state.items, this.state.text]
         })
     }
 
@@ -29,17 +28,16 @@ export default class TodoList extends React.Component {
         })
     }
 
-    removeTodo = (item) => {
+    removeTodo = (el) => {
         this.setState ({
-            items: this.state.items.filter (el => el !== item)
+            items: this.state.items.filter (item => item !== el)
         })
     }
-
     render () {
         return (
             <>
                 <h1>Todo list:</h1>
-                <ul>{this.state.items.map(item => <li key={item.id}>{item.text}<button onClick={() => {this.removeTodo(item)}}>Remove todo</button></li>)}</ul>
+                {this.props.render(this.state.items, this.removeTodo)}
                 <input onChange={this.handleChange} value={this.state.text} />
                 <button onClick={this.handleSubmit}>Add Todo</button>
                 <button onClick={this.resetTodos}>Reset Todos</button>

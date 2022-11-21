@@ -22,7 +22,11 @@ export default class App extends React.Component {
               <InteractiveWelcome />
               <Login />
               <UncontrolledLogin />
-              <TodoList />
+              <TodoList render={(arr, removeFunction) => {
+                return (
+                    arr.map((item, index) => <li key={index}>{item}<button onClick={() => {removeFunction(item)}}>Remove todo</button></li>)
+                )
+                }} />
               <Container title={<h3>This is a title</h3>}>
                 <p>This is a paragraph</p>
               </Container>
