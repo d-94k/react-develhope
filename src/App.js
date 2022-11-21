@@ -23,8 +23,8 @@ export default class App extends React.Component {
               <Login />
               <UncontrolledLogin />
               <TodoList />
-              <Container>
-                <h3>This is a container</h3>
+              <Container title={<h3>This is a title</h3>}>
+                <p>This is a paragraph</p>
               </Container>
             </div>
         )
