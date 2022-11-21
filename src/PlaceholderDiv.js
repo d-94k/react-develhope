@@ -11,7 +11,7 @@ export default class PlaceholderDiv extends React.Component {
         return (
             <LanguageContext.Consumer>
                 {(language) => {
-                    return <div>{Strings[language].text}</div>
+                    return <div><h1>{Strings[language].text}</h1></div>
                 }}
             </LanguageContext.Consumer>
         )
