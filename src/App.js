@@ -9,6 +9,7 @@ import Login from "./Login";
 import UncontrolledLogin from "./UncontrolledLogin";
 import TodoList from "./TodoList";
 import Container from "./Container";
+import DisplayLanguage from "./DisplayLanguage";
 
 export default class App extends React.Component {
     render () {
@@ -30,6 +31,7 @@ export default class App extends React.Component {
               <Container title={<h3>This is a title</h3>}>
                 <p>This is a paragraph</p>
               </Container>
+              <DisplayLanguage />
             </div>
         )
     }
