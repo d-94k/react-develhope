@@ -1,45 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default class Login extends React.Component {
-    constructor (props) {
-        super (props);
-        this.state = {
-            username: '',
-            password: '',
-            remember: false
-        }
-    }
+export default function Login () {
 
-    inputHandler = (event) => {
-        const name = event.target.name;
-        const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
-        this.setState ({
-            [name] : value
+    const [data, setData] = useState ({
+        username: '',
+        password: '',
+        remember: false
+    })
+
+    function formHandler (event) {
+        const { name, type, value, checked } = event.target;
+        setData ((data) => {
+            return {
+                ...data,
+                [name] : type === 'checkbox' ? checked : value
+            }
         })
     }
 
-    onLogin = () => {
-        console.log (this.state);
+    const formLog = (event) => {
+        event.preventDefault ();
+        console.log (data);
     }
 
-    onReset = () => {
-        this.setState({
+    const formReset = (event) => {
+        event.preventDefault ();
+        setData({
             username: '',
             password: '',
             remember: false
         })
     }
 
-    render () {
-        return (
-            <div style={{backgroundColor: this.state.password.length > 3 ? 'green' : 'red'}}>
-                <h3>Login.js form:</h3>
-                <input name="username" value={this.state.username} onChange={this.inputHandler} /> 
-                <input name="password" type="password" value={this.state.password} onChange={this.inputHandler} />   
-                <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.inputHandler} />
-                <button disabled={this.state.username !== '' && this.state.password !== '' ? false : true} onClick={this.onLogin}>Login</button>
-                <button onClick={this.onReset}>Reset</button>
-            </div>
-        )
-    }
+    return (
+        <>
+            <h3>Login form in a function component:</h3>
+            <form onSubmit={formLog}>
+                <input name="username" type="text" value={data.username} onChange={formHandler} placeholder="username"/>
+                <input name="password" type="password" value={data.password} onChange={formHandler} placeholder="password" />
+                <input name="remember" type="checkbox" checked={data.remember} onChange={formHandler} />
+                <button type="submit" disabled={data.username !== '' && data.password !== '' ? false : true}>Submit</button>
+                <button onClick={formReset}>Reset</button>
+            </form>
+        </>
+    )
 }
