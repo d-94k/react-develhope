@@ -1,1 +1,1 @@
-Consume the LanguageContext within the DisplayLanguage component by using the context consumer, and show the selected language in an h1 tag.
+Rewrite the Welcome component to be a function component.
