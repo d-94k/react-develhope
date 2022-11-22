@@ -1,1 +1,3 @@
-What happens if the numbers prop of the Sum component is not set? How can you set a default value for this prop?
+Rewrite the ClickCounter component from Events 01 as a function component, and use the useState hook to track the state of the counter.
+
+** ClickCounter.js **
