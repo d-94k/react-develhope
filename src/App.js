@@ -10,6 +10,7 @@ import UncontrolledLogin from "./UncontrolledLogin";
 import TodoList from "./TodoList";
 import Container from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
+import Sum from "./Sum";
 
 export default class App extends React.Component {
     render () {
@@ -32,6 +33,7 @@ export default class App extends React.Component {
                 <p>This is a paragraph</p>
               </Container>
               <DisplayLanguage />
+              <Sum arr={[1, 2, 3, 4, 5]} />
             </div>
         )
     }
