@@ -33,7 +33,7 @@ export default class App extends React.Component {
                 <p>This is a paragraph</p>
               </Container>
               <DisplayLanguage />
-              <Sum arr={[1, 2, 3, 4, 5]} />
+              <Sum />
             </div>
         )
     }
