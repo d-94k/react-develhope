@@ -11,12 +11,14 @@ import TodoList from "./TodoList";
 import Container from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import Sum from "./Sum";
+import { GithubUser } from "./GithubUser";
 
 export default class App extends React.Component {
     render () {
         return (
             <div>
               <Hello />
+              <GithubUser username="d-94k" />
               <Welcome name="Simon" age={100} />
               <Counter initVal={0} counterAmount={1} intervalAmount={1000} />
               <ClickCounter onCounterChange={(item) => {console.log("Counter is at ", item)}} />
