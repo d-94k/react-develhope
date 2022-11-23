@@ -12,6 +12,7 @@ import Container from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import Sum from "./Sum";
 import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export default class App extends React.Component {
     render () {
@@ -19,6 +20,7 @@ export default class App extends React.Component {
             <div>
               <Hello />
               <GithubUser username="d-94k" />
+              <GithubUserList />
               <Welcome name="Simon" age={100} />
               <Counter initVal={0} counterAmount={1} intervalAmount={1000} />
               <ClickCounter onCounterChange={(item) => {console.log("Counter is at ", item)}} />
