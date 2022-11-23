@@ -12,7 +12,7 @@ import Container from "./Container";
 import DisplayLanguage from "./DisplayLanguage";
 import Sum from "./Sum";
 import { GithubUser } from "./GithubUser";
-import { GithubUserList } from "./GithubUserList";
+import GithubUserList  from "./GithubUserList";
 
 export default class App extends React.Component {
     render () {

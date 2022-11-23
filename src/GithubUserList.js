@@ -1,41 +1,40 @@
-import { useState } from "react";
-// import { GithubUser } from "./GithubUser";
+import React, { useState } from "react";
+import { GithubUserP } from "./GithubUserP";
 
-export const GithubUserList = () => {
+export default function GithubUserList () {
+
     const [data, setData] = useState ({
-        username: '',
+        text: '',
         items: []
     })
 
-    const inputHandler = (event) => {
+    function formHandler (event) {
         setData ((data) => {
             return {
-                username: event.target.value,
-                items: []
+                text: event.target.value,
+                items: [...data.items]
             }
         })
     }
 
-    const formSubmitter = (event) => {
+    const formLog = (event) => {
         event.preventDefault ();
         setData ((data) => {
             return {
-                username: '',
-                items: ["miao"]
+                text: '',
+                items: [...data.items, data.text]
             }
-        });
-        console.log (data);
+        })
     }
 
-
     return (
-        <div style={{backgroundColor: '#f3f3f3', border: '2px solid gray'}}>
-            <form onSubmit={formSubmitter}>
-                <h1>Users' List:</h1>
-                <ul></ul>
-                <input type="text" name="list" onChange={inputHandler} value={data.username} placeholder="enter a GitHub username to retrieve its id" />
-                <button type="submit">Submit User</button>
+        <>
+            <h3>Login form in a function component:</h3>
+            <form onSubmit={formLog}>
+                <input name="username" type="text" value={data.text} onChange={formHandler} placeholder="username"/>
+                <button type="submit">Submit</button>
             </form>
-        </div>
+            <ul>{data.items.map((item, index) => <li key={index}>Github user with id# <b><GithubUserP username={item} /></b></li>)}</ul>
+        </>
     )
 }
