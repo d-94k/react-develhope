@@ -18,7 +18,7 @@ export default class App extends React.Component {
             <div>
               <Hello />
               <Welcome name="Simon" age={100} />
-              <Counter initVal={10} counterAmount={100} intervalAmount={300} />
+              <Counter initVal={0} counterAmount={1} intervalAmount={1000} />
               <ClickCounter onCounterChange={(item) => {console.log("Counter is at ", item)}} />
               <ClickTracker />
               <InteractiveWelcome />
