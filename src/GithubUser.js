@@ -16,7 +16,7 @@ export const GithubUser = ({username}) => {
             const response = await fetch (`https://api.github.com/users/${username}`);
             const json = await response.json ();
             setData (json);
-        } catch (e) {
+        } catch (error) {
             setError (error);
             setData (null);
         } finally {
