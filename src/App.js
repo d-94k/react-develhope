@@ -13,7 +13,8 @@ import React from "react";
 // import Sum from "./Sum";
 // import { GithubUser } from "./GithubUser";
 // import GithubUserList  from "./GithubUserList";
-import { HookCounter } from "./HookCounter";
+// import { HookCounter } from "./HookCounter";
+import { HookForm } from "./HookForm";
 
 export default class App extends React.Component {
     render () {
@@ -39,7 +40,8 @@ export default class App extends React.Component {
               </Container>
               <DisplayLanguage />
               <Sum /> */}
-              <HookCounter />
+              {/* <HookCounter /> */}
+              <HookForm />
             </div>
         )
     }
