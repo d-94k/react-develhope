@@ -1,24 +1,25 @@
 import React from "react";
-import ClickCounter from "./ClickCounter";
-import ClickTracker from "./ClickTracker";
-import Counter from "./Counter";
-import Hello from './Hello';
-import InteractiveWelcome from "./InteractiveWelcome";
-import Welcome from "./Welcome";
-import Login from "./Login";
-import UncontrolledLogin from "./UncontrolledLogin";
-import TodoList from "./TodoList";
-import Container from "./Container";
-import DisplayLanguage from "./DisplayLanguage";
-import Sum from "./Sum";
-import { GithubUser } from "./GithubUser";
-import GithubUserList  from "./GithubUserList";
+// import ClickCounter from "./ClickCounter";
+// import ClickTracker from "./ClickTracker";
+// import Counter from "./Counter";
+// import Hello from './Hello';
+// import InteractiveWelcome from "./InteractiveWelcome";
+// import Welcome from "./Welcome";
+// import Login from "./Login";
+// import UncontrolledLogin from "./UncontrolledLogin";
+// import TodoList from "./TodoList";
+// import Container from "./Container";
+// import DisplayLanguage from "./DisplayLanguage";
+// import Sum from "./Sum";
+// import { GithubUser } from "./GithubUser";
+// import GithubUserList  from "./GithubUserList";
+import { HookCounter } from "./HookCounter";
 
 export default class App extends React.Component {
     render () {
         return (
             <div>
-              <Hello />
+              {/* <Hello />
               <GithubUser username="d-94k" />
               <GithubUserList />
               <Welcome name="Simon" age={100} />
@@ -37,7 +38,8 @@ export default class App extends React.Component {
                 <p>This is a paragraph</p>
               </Container>
               <DisplayLanguage />
-              <Sum />
+              <Sum /> */}
+              <HookCounter />
             </div>
         )
     }
