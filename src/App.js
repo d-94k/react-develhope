@@ -1,5 +1,6 @@
 import React from "react";
-import { UncontrolledCarDetails } from "./UncontrolledCarDetails";
+import { DisplayLanguage } from "./DisplayLanguage";
+// import { UncontrolledCarDetails } from "./UncontrolledCarDetails";
 // import ClickCounter from "./ClickCounter";
 // import ClickTracker from "./ClickTracker";
 // import Counter from "./Counter";
@@ -45,7 +46,8 @@ export default class App extends React.Component {
               {/* <HookCounter /> */}
               {/* <HookForm /> */}
               {/* <HookGithubUser username="d-94k" /> */}
-              <UncontrolledCarDetails />
+              {/* <UncontrolledCarDetails /> */}
+              <DisplayLanguage />
             </div>
         )
     }

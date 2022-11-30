@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext } from "react";
 import { LanguageContext } from "./LanguageContext";
 
 const Strings = {
@@ -6,14 +6,9 @@ const Strings = {
     it: {text: "Questo testo è in italiano"}
 }
 
-export default class PlaceholderDiv extends React.Component {
-    render () {
-        return (
-            <LanguageContext.Consumer>
-                {(language) => {
-                    return <div><h1>{Strings[language].text}</h1></div>
-                }}
-            </LanguageContext.Consumer>
-        )
-    }
+export const PlaceholderDiv = () => {
+    const language = useContext (LanguageContext);
+    return (
+        <div><h1>{Strings[language].text}</h1></div>
+    )
 }
