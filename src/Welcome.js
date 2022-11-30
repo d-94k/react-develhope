@@ -1,11 +1,16 @@
-import React from "react";
-import Age from "./Age";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 export default function Welcome (props) {
+    const navigate = useNavigate ();
+    const { name = 'World' } = useParams ();
+    const toLogin = () => {
+        navigate ('/login');
+    }
     return (
             <div className="welcome">
-                <p>Welcome, {props.name ? props.name : "guest"}!</p>
-                {props.age > 18 ? <Age age={props.age} /> : 'You are very young!'}
+                <p>Hello, {name} </p>
+                <Link to="/login">Login to the App</Link>
+                <button onClick={toLogin}>Enter the app</button>
             </div>
         )
 }
