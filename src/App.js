@@ -1,4 +1,5 @@
 import React from "react";
+import FilteredList from "./FilteredList";
 // import { DisplayLanguage } from "./DisplayLanguage";
 // import { UncontrolledCarDetails } from "./UncontrolledCarDetails";
 // import ClickCounter from "./ClickCounter";
@@ -15,7 +16,7 @@ import React from "react";
 // import Sum from "./Sum";
 // import { GithubUser } from "./GithubUser";
 // import GithubUserList  from "./GithubUserList";
-import { HookCounter } from "./HookCounter";
+// import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
 // import { HookGithubUser } from "./HookGithubUser";
 
@@ -48,7 +49,8 @@ export default class App extends React.Component {
               {/* <HookGithubUser username="d-94k" /> */}
               {/* <UncontrolledCarDetails /> */}
               {/* <DisplayLanguage /> */}
-              <HookCounter />
+              {/* <HookCounter /> */}
+              <FilteredList />
             </div>
         )
     }
