@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
 
-export const GithubUser = ({username}) => {
-
+export const GithubUser = () => {
+    const { name } = useParams ();
     const [data, setData] = useState (null);
     const [loading, setLoading] = useState (false);
     const [error, setError] = useState (null);
     useEffect (() => {
-        fetchGit (username)
-    }, [username])
+        fetchGit (name)
+    }, [name])
 
-    async function fetchGit (username) {
+    async function fetchGit (name) {
         try {
             setLoading (true);
             setError (null);
-            const response = await fetch (`https://api.github.com/users/${username}`);
+            const response = await fetch (`https://api.github.com/users/${name}`);
             const json = await response.json ();
             setData (json);
         } catch (error) {
@@ -25,11 +26,11 @@ export const GithubUser = ({username}) => {
     }
 
     return (
-        <>
+        <> 
             <h1>Users API:</h1>
             {loading && <h3>Loading...</h3>}
             {error && <h1>There has been an error</h1>}
-            <h3>Welcome, {data && data.login}</h3>
+            <h3>Welcome, {data && data.id}</h3>
         </>
     )
 }
