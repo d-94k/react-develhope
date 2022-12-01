@@ -9,12 +9,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Welcome name="newUser" />} />
             <Route path="counter" element={<Counter />} />
-            <Route path=":name" element={<GithubUser />}/>
+            <Route path="users/:username" element={<GithubUser />}/>
           </Routes>
           <ul>
             <Link to="/">Home</Link>
             <Link to="counter">Counter</Link>
-            <Link to=":name">Github details</Link>
+            <Link to="users/:username">Github details</Link>
           </ul>
         </div>
       )
