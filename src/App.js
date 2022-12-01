@@ -1,6 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Counter from "./Counter";
-import { GithubUser } from "./GithubUser";
 import Welcome from "./Welcome";
 
 const App = () => {
@@ -9,12 +8,11 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Welcome name="newUser" />} />
             <Route path="counter" element={<Counter />} />
-            <Route path=":name" element={<GithubUser />}/>
+            <Route path="*" element={<h3>Page not found</h3>} />
           </Routes>
           <ul>
-            <Link to="/">Home</Link>
-            <Link to="counter">Counter</Link>
-            <Link to=":name">Github details</Link>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="counter">Counter</Link></li>
           </ul>
         </div>
       )
