@@ -30,7 +30,7 @@ export default function GithubUserList () {
 
     return (
         <>
-            <h3>Login form in a function component:</h3>
+            <h3>Enter a valid GitHub username to check their id number:</h3>
             <form onSubmit={formLog}>
                 <input name="username" type="text" value={data.text} onChange={formHandler} placeholder="username"/>
                 <button type="submit">Submit</button>

@@ -14,10 +14,10 @@ const App = () => {
               <Route path=":username" element={<GithubUser />} />
             </Route>
           </Routes>
-          <ul>
+          <ul style={{border: "2px solid black", display: "flex", flexDirection: "column"}}>
             <Link to="/">Home</Link>
             <Link to="counter">Counter</Link>
-            <Link to="users">Users</Link>
+            <Link to="users">GitHub userlist</Link>
           </ul>
         </div>
       )
