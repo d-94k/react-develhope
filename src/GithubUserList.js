@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { GithubUserP } from "./GithubUserP";
+import { Link, Outlet } from "react-router-dom";
+// import { GithubUserP } from "./GithubUserP";
 
 export default function GithubUserList () {
 
@@ -34,7 +35,13 @@ export default function GithubUserList () {
                 <input name="username" type="text" value={data.text} onChange={formHandler} placeholder="username"/>
                 <button type="submit">Submit</button>
             </form>
-            <ul>{data.items.map((item, index) => <li key={index}>Github user with id# <b><GithubUserP username={item} /></b></li>)}</ul>
+            <ul>{data.items.map((item, index) => <li key={index}><Link to={item}>Click here to check the #id of the user you entered ({item})</Link></li>)}</ul>
+            <Outlet />
         </>
     )
 }
+
+// <ul>{data.items.map((item, index) =><li key={index}><Link to=`:${item}`>{item}</Link></li>)}</ul>
+
+
+//<ul>{data.items.map((item, index) => <li key={index}>Github user with id# <b><GithubUserP username={item} /></b></li>)}</ul>

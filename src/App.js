@@ -1,6 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Counter from "./Counter";
 import { GithubUser } from "./GithubUser";
+import GithubUserList from "./GithubUserList";
 import Welcome from "./Welcome";
 
 const App = () => {
@@ -9,12 +10,14 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Welcome name="newUser" />} />
             <Route path="counter" element={<Counter />} />
-            <Route path="users/:username" element={<GithubUser />}/>
+            <Route path="users" element={<GithubUserList />}>
+              <Route path=":username" element={<GithubUser />} />
+            </Route>
           </Routes>
           <ul>
             <Link to="/">Home</Link>
             <Link to="counter">Counter</Link>
-            <Link to="users/:username">Github details</Link>
+            <Link to="users">Users</Link>
           </ul>
         </div>
       )
