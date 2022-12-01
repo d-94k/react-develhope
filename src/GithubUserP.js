@@ -25,6 +25,7 @@ export const GithubUserP = ({ username }) => {
 
     return (
         <>
+            
             {loading && <p>Loading...</p>}
             {error && <p>There has been an error</p>}
             <p>{data && data.id}</p>

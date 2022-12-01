@@ -27,7 +27,8 @@ export const GithubUser = () => {
 
     return (
         <> 
-            <h1>Users API:</h1>
+            <h1>Edit website path above to see your Github UserID</h1>
+            <p>example: localhost:3000/d-94k</p>
             {loading && <h3>Loading...</h3>}
             {error && <h1>There has been an error</h1>}
             <h3>Welcome, {data && data.id}</h3>
