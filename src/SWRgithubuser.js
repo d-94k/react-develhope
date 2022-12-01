@@ -2,7 +2,7 @@ import useSWR from "swr";
 
 function useGithubswr (username) {
     const fetcher = url => fetch(url).then((r) => r.json());
-    const { data, error } = useSWR (`https://api.github.com/users/${username}`, fetcher);
+    const { data, error } = useSWR (username !== null ? `https://api.github.com/users/${username}`: null, fetcher);
     return {
         data,
         error,
