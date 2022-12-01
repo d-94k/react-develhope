@@ -1,7 +1,7 @@
 import useGithubUser from "./UseGithubUser";
 
 export const HookGithubUser = ({username}) => {
-    const { loading, error, data, onFetch } = useGithubUser ({username});
+    const { loading, error, data, onFetch } = useGithubUser ();
     const handleFetch = () => {
         onFetch (username);
     }

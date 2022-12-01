@@ -1,1 +1,1 @@
-Add an index route to the GithubUserList route that shows the "Add a user and select it" message.
+Modify the useGithubUser custom hook from Custom Hooks 03 to use the useSWR hook to fetch the data of a Github user.
