@@ -11,6 +11,7 @@ const App = () => {
             <Route path="/" element={<Welcome name="newUser" />} />
             <Route path="counter" element={<Counter />} />
             <Route path="users" element={<GithubUserList />}>
+              <Route index element={<p>Please enter a valid Github username</p>} />
               <Route path=":username" element={<GithubUser />} />
             </Route>
           </Routes>
